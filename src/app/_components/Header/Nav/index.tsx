@@ -33,7 +33,6 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
       {!user && (
         <React.Fragment>
           <Link href="/login">Login</Link>
-          <Link href="/create-account">Create Account</Link>
         </React.Fragment>
       )}
     </nav>

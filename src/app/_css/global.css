@@ -1,3 +1,92 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.section1 {
+  background: #4D8330;
+}
+
+.animation_layer {
+  background-position: bottom center;
+  background-size: auto 1038px;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+}
+
+.animation_layer.parallax {
+  position: fixed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* -------------------- HEADER+NAVBAR -------------------- */
+nav {
+  display: flex;
+  justify-content: center;
+}
+.nav-content {
+  width: 980px;
+}
+.nav-content ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #d5d5d5;
+}
+
+/* Navbar #1 */
+ul {
+  display: flex;
+  list-style: none;
+}
+li {
+  margin-right: 1rem;
+  line-height: 44px;
+}
+h1 {
+  margin: 0;
+}
+
+/* Navbar #2 */
+.origenes-navbar .nav-content {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-items button {
+  color: #000000;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.nav-items button:disabled,
+.nav-items button:disabled:hover {
+  color: #706c6c;
+  cursor: default;
+}
+.nav-items .buy-btn {
+  background: #4D8330;
+}
+.nav-items .buy-btn:hover {
+  color: #ffffff;
+}

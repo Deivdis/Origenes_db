@@ -22,10 +22,6 @@ const HeaderComponent = ({ header }: { header: Header }) => {
         .join(' ')}
     >
       <Gutter className={classes.wrap}>
-        <Link href="/">
-          <Image src="/logo-global.png" alt="logo" width={170} height={50} />
-        </Link>
-
         <HeaderNav header={header} />
       </Gutter>
     </nav>
