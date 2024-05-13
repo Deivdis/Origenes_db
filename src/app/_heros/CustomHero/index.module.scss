@@ -18,6 +18,7 @@
   max-height: 884px;
   display: flex;
   align-items: center;
+  border-radius: 25px;
 
   background-size: cover;
   background-position: revert;
@@ -35,6 +36,7 @@
   justify-content: center;
   padding: 15% var(--gutter-h);
   width: 100%;
+  text-align: center;
 
   @include mid-break {
     padding: 10% 30px;
@@ -51,7 +53,7 @@
     @include mid-break {
       font-size: 48px;
       margin: 24px 0;
-      white-space: wrap;
+      white-space: pre-wrap;
     }
 
     @include small-break {
@@ -76,9 +78,6 @@
 
 .links {
   list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
   padding-top: 50px;
   flex-wrap: wrap;
   margin: calc(var(--base) * -0.5);

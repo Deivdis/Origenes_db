@@ -83,7 +83,7 @@
 
   --theme-bg: var(--theme-elevation-0);
   --theme-input-bg: var(--theme-elevation-50);
-  --theme-text: var(--theme-elevation-750);
+  --theme-text: var(--color-base-850);
   --theme-border-color: var(--theme-elevation-150);
 
   color-scheme: light;
@@ -209,7 +209,7 @@
   color: var(--theme-text);
 
   --highlight-default-bg-color: var(--theme-success-100);
-  --highlight-default-text-color: var(--theme-success-600);
+  --highlight-default-text-color: var(--color-success-200);
 
   --highlight-danger-bg-color: var(--theme-error-100);
   --highlight-danger-text-color: var(--theme-error-550);
