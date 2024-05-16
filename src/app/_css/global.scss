@@ -89,3 +89,18 @@ h1 {
 .nav-items .buy-btn:hover {
   color: #ffffff;
 }
+
+.section1 {
+  background: #4D8330;
+}
+
+.animation_layer {
+  background-position: bottom center;
+  background-size: auto 1038px;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+}
+.animation_layer.parallax {
+  position: fixed;
+}

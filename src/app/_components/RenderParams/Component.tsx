@@ -47,6 +47,5 @@ export const RenderParamsComponent: React.FC<Props> = ({
       </div>
     )
   }
-
   return null
 }

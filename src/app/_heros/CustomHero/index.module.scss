@@ -4,7 +4,7 @@
   position: relative;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center hero content horizontally */
 
   @include small-break {
     margin: 0;
@@ -43,7 +43,8 @@
   }
 
   @include small-break {
-    padding: 50px 30px;
+    padding: 50px 20px;
+    text-align: left;
   }
 
   h2 {
@@ -57,7 +58,7 @@
     }
 
     @include small-break {
-      width: 70%;
+      width: 90%; /* Reduce h2 width on small screens */
       font-size: 36px;
       margin: 8px 0;
     }
@@ -76,9 +77,12 @@
   }
 }
 
+/* Style the .links elements */
 .links {
   list-style: none;
   padding-top: 50px;
+  display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: calc(var(--base) * -0.5);
 

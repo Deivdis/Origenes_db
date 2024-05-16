@@ -15,8 +15,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="en" suppressHydrationWarning>
       <head>
         <InitTheme />
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/origenes-icon-2.svg" sizes="32x32" />
+        <title>Orígenes</title>
       </head>
       <body>
         <Providers>
@@ -33,10 +33,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'https://payloadcms.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'https://github.com/Deivdis'),
   twitter: {
     card: 'summary_large_image',
-    creator: '@payloadcms',
+    creator: '@Deivids',
   },
   openGraph: mergeOpenGraph(),
 }

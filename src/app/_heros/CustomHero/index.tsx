@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import Image from 'next/image'
 
 import { Page } from '../../../payload/payload-types'
 import { Gutter } from '../../_components/Gutter'

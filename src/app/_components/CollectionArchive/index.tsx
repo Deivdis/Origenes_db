@@ -28,11 +28,15 @@ export type Props = {
   relationTo?: 'products'
   populateBy?: 'collection' | 'selection'
   showPageRange?: boolean
-  onResultChange?: (result: Result) => void // eslint-disable-line no-unused-vars
+  onResultChange?: (result: Result) => void
   limit?: number
   populatedDocs?: ArchiveBlockProps['populatedDocs']
   populatedDocsTotal?: ArchiveBlockProps['populatedDocsTotal']
   categories?: ArchiveBlockProps['categories']
+  selectedDocs?:
+    | { relationTo: 'products'; value: string }[]
+    | { relationTo: 'products'; value: Product }[]
+  sort?: string
 }
 
 export const CollectionArchive: React.FC<Props> = props => {

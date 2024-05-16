@@ -12,7 +12,7 @@ import { Button } from '../../Button'
 import { Gutter } from '../../Gutter'
 import { CMSLink } from '../../Link'
 
-import '../../../_css/global.css'
+import '../../../_css/global.scss'
 
 import classes from './index.module.scss'
 
