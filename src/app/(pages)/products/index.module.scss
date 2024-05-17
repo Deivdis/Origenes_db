@@ -1,6 +1,7 @@
 @import '../../_css/common';
 
 .container {
+  padding-top: calc(var(--base) * 4);
   width: 100%;
 }
 

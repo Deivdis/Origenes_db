@@ -8,7 +8,7 @@ export default function NotFound() {
   return (
     <Gutter>
       <VerticalPadding top="none" bottom="large">
-        <div className="text-center">
+        <div className="text-center pt-[calc(var(--base)_*_10)]">
           <h1>404</h1>
           <p>This page could not be found.</p>
           <Button href="/" label="Go Home" appearance="primary" />

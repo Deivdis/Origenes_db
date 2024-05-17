@@ -1,23 +1,14 @@
 @import '../../_css/common';
 
+.page {
+  padding-top: calc(var(--base) * 3);
+}
+
 .container {
   width: 100%;
   margin: 50px 0;
 
   @include small-break {
-    margin-top: 30px;
-  }
-}
-
-.account {
-  display: grid;
-  grid-template-columns: 30% 1fr;
-  gap: 60px;
-  margin-top: 30px;
-
-  @include small-break {
-    grid-template-columns: 1fr;
-    gap: 30px;
     margin-top: 30px;
   }
 }
@@ -38,4 +29,16 @@
 
 .personalInfo {
   margin-bottom: 30px;
+}
+
+.ul {
+  display: flex; /* Make the list items horizontal by default */
+  list-style: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  gap: 10px; /* Spacing between list items */
+
+  @include small-break { /* Target smaller screens (adjust breakpoint as needed) */
+    flex-direction: column; /* Stack list items vertically on smaller screens */
+  }
 }

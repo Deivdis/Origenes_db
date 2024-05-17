@@ -1,6 +1,7 @@
 @use '../../_css/common.scss' as *;
 
 .container {
+  padding-top: calc(var(--base) * 4);
   margin-top: 50px;
   width: 100%;
 

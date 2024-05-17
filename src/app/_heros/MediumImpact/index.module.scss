@@ -1,7 +1,7 @@
 @use '../../_css/common.scss' as *;
 
 .hero {
-  padding-top: calc(var(--base) * 3);
+  padding-top: calc(var(--base) * 7);
 
   @include mid-break {
     padding-top: var(--base);
