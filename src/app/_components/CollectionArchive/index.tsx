@@ -137,7 +137,7 @@ export const CollectionArchive: React.FC<Props> = props => {
       } catch (err) {
         console.warn(err) // eslint-disable-line no-console
         setIsLoading(false)
-        setError(`Unable to load "${relationTo} archive" data at this time.`)
+        setError(`No se pueden cargar los datos del "${relationTo} archivo" en este momento.`)
       }
     }
 

@@ -1,44 +1,44 @@
 export const inclusions = [
   {
-    title: 'Free Shipping',
-    description: 'Free shipping for order above $150',
+    title: 'Envío gratis',
+    description: 'Envío gratuito superiores a $100.000',
     icon: '/assets/icons/shipping.svg',
   },
   {
-    title: 'Money Guarantee',
-    description: 'Within 30 days for an exchange',
+    title: 'Garantía de dinero',
+    description: 'Dentro de 30 días para un cambio',
     icon: '/assets/icons/dollar.svg',
   },
   {
-    title: 'Online Support',
-    description: '24 hours a day, 7 days a week',
+    title: 'Soporte en línea',
+    description: '24 horas al día, 7 días a la semana',
     icon: '/assets/icons/support.svg',
   },
   {
-    title: 'Flexible Payment',
-    description: 'Pay with multiple credit cards',
+    title: 'Pago flexible',
+    description: 'Pagar con varias tarjetas de crédito',
     icon: '/assets/icons/payment.svg',
   },
 ]
 
 export const profileNavItems = [
   {
-    title: 'Personal Information',
+    title: 'Informacion personal',
     url: '/account',
     icon: '/assets/icons/user.svg',
   },
   {
-    title: 'My Purchases',
+    title: 'Mis compras',
     url: '/account/purchases',
     icon: '/assets/icons/purchases.svg',
   },
   {
-    title: 'My Orders',
+    title: 'Mis ordenes',
     url: '/account/orders',
     icon: '/assets/icons/orders.svg',
   },
   {
-    title: 'Logout',
+    title: 'Cerrar sesión',
     url: '/logout',
     icon: '/assets/icons/logout.svg',
   },

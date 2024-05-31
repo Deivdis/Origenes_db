@@ -44,7 +44,7 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
       <div className={classes.footer}>
         <Gutter>
           <nav>
-            <div className="text-2xl">
+            <div className="text-2xl text-[#4D8330]">
               <p>Orígenes</p>
             </div>
           </nav>
@@ -77,15 +77,7 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
                     href={item.link.url}
                     newTab={true}
                     className={classes.socialLinkItem}
-                  >
-                    <Image
-                      src={icon?.url}
-                      alt={item.link.label}
-                      width={24}
-                      height={24}
-                      className={classes.socialIcon}
-                    />
-                  </Button>
+                  ></Button>
                 )
               })}
             </div>

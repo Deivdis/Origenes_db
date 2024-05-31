@@ -2,13 +2,14 @@
 import React, { useEffect, useState } from 'react'
 
 import classes from './index.module.scss'
+import { TextGenerateEffectDemo } from "../features/text-effect-demo";
 
 const Promotion = () => {
   const [time, setTime] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
+    dias: 0,
+    horas: 0,
+    minutos: 0,
+    segundos: 0,
   })
 
   const targetDate = new Date()
@@ -19,12 +20,12 @@ const Promotion = () => {
       const currentTime = new Date()
       const timeDifference = Math.max(Number(targetDate) - Number(currentTime), 0)
 
-      const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
-      const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-      const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60))
-      const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000)
+      const dias = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
+      const horas = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+      const minutos = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60))
+      const segundos = Math.floor((timeDifference % (1000 * 60)) / 1000)
 
-      setTime({ days, hours, minutes, seconds })
+      setTime({ dias, horas, minutos, segundos })
 
       if (timeDifference === 0) {
         clearInterval(timerInterval)
@@ -40,18 +41,13 @@ const Promotion = () => {
   return (
     <section className={classes.promotion}>
       <div className={classes.textBox}>
-        <h3 className={classes.title}>Deals of the Month</h3>
-        <p>
-          Get ready for a shopping experience like never before with our Deals of the Month! Every
-          purchase comes with exclusive perks and offers, making this month a celebration of savvy
-          choices and amazing deals. Don't miss out! 🎁🛒
-        </p>
-
+        <h3 className={classes.title}>Ofertas del mes</h3>
+        <TextGenerateEffectDemo></TextGenerateEffectDemo>
         <ul className={classes.stats}>
-          <StatBox label="Days" value={time.days} />
-          <StatBox label="Hours" value={time.hours} />
-          <StatBox label="Minutes" value={time.minutes} />
-          <StatBox label="Seconds" value={time.seconds} />
+          <StatBox label="Dias" value={time.dias} />
+          <StatBox label="Horas" value={time.horas} />
+          <StatBox label="Minutos" value={time.minutos} />
+          <StatBox label="Segundos" value={time.segundos} />
         </ul>
       </div>
     </section>

@@ -39,28 +39,29 @@ export default async function Product({ params: { slug } }) {
   return (
     <>
       <ProductHero product={product} />
-      {product?.enablePaywall && <PaywallBlocks productSlug={slug as string} disableTopPadding />}
-      <Blocks
-        disableTopPadding
-        blocks={[
-          {
-            blockType: 'relatedProducts',
-            blockName: 'Related Product',
-            relationTo: 'products',
-            introContent: [
-              {
-                type: 'h3',
-                children: [
-                  {
-                    text: 'Related Products',
-                  },
-                ],
-              },
-            ],
-            docs: relatedProducts,
-          },
-        ]}
-      />
+      <div className="p-20">
+        <Blocks
+          disableTopPadding
+          blocks={[
+            {
+              blockType: 'relatedProducts',
+              blockName: 'Productos Relacionados',
+              relationTo: 'products',
+              introContent: [
+                {
+                  type: 'h3',
+                  children: [
+                    {
+                      text: 'Productos Relacionados',
+                    },
+                  ],
+                },
+              ],
+              docs: relatedProducts,
+            },
+          ]}
+        />
+      </div>
     </>
   )
 }

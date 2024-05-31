@@ -6,6 +6,7 @@ import { Gutter } from '../../_components/Gutter'
 import { CMSLink } from '../../_components/Link'
 import { Media } from '../../_components/Media'
 import RichText from '../../_components/RichText'
+import { TypewriterEffectSmooth } from '../../_components/ui/typewriter-effect'
 
 import '../../_css/global.scss'
 
@@ -17,7 +18,20 @@ export const MediumImpactHero: React.FC<Page['hero']> = props => {
   return (
     <Gutter className={classes.hero}>
       <div className={classes.background}>
-        <RichText className={classes.richText} content={richText} />
+        <div className="flex flex-col items-center justify-center h-[40rem]  ">
+          <p className="text-neutral-600 text-xs sm:text-base">
+            The road to freedom starts from here
+          </p>
+          <TypewriterEffectSmooth richText={richText} />
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+            <button className="w-40 h-10 rounded-xl bg-[#4D8330] border dark:border-white border-transparent text-white text-sm">
+              Soy nuevo
+            </button>
+            <button className="w-40 h-10 rounded-xl bg-white text-black border border-black text-sm">
+              Registrarse
+            </button>
+          </div>
+        </div>
         {Array.isArray(links) && (
           <ul className={classes.links}>
             {links.map(({ link }, i) => {

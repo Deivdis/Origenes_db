@@ -2,11 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app",
-    "\\src\\app\\_components",
-    "\\src\\payload",
-    "\\src\\payload\\components",
-    "\\src\\payload\\components\\BeforeDashboard"
+    "\\src\\app"
   ],
   "PreviewInSolutionExplorer": false
 }

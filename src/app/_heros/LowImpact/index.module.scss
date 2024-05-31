@@ -1,4 +1,5 @@
 @use '../../_css/type.scss' as *;
 
 .lowImpactHero {
+  padding-top: calc(var(--base) * 7);
 }

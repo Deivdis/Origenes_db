@@ -35,14 +35,14 @@
 }
 
 .logo {
-  margin: 60px;
-  width: 30%;
+  margin: 70px;
+  width: 25%;
   min-width: 150px;
   z-index: 10;
 
   @include mid-break {
     width: 45%;
-    margin: 10px;
+    margin: 60px;
   }
 }
 

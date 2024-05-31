@@ -21,10 +21,10 @@ export default async function Login() {
       <div className={classes.heroImg}>
         <Link href="/">
           <Image
-            src="/logo-black.svg"
+            src="/logo-white.svg"
             alt="logo"
-            width={250}
-            height={23}
+            width={200}
+            height={20}
             className={classes.logo}
           />
         </Link>

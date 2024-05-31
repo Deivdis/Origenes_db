@@ -15,7 +15,7 @@ import classes from './index.module.scss'
 export default async function Checkout() {
   await getMeUser({
     nullUserRedirect: `/login?error=${encodeURIComponent(
-      'You must be logged in to checkout.',
+      'Debes estar registrado para pagar.',
     )}&redirect=${encodeURIComponent('/checkout')}`,
   })
 
@@ -39,7 +39,7 @@ export default async function Checkout() {
 
 export const metadata: Metadata = {
   title: 'Account',
-  description: 'Create an account or log in to your existing account.',
+  description: 'Cree una cuenta o inicie sesión en su cuenta existente.',
   openGraph: mergeOpenGraph({
     title: 'Account',
     url: '/account',

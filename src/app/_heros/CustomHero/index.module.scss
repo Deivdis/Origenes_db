@@ -5,6 +5,8 @@
   overflow: hidden;
   display: flex;
   justify-content: center; /* Center hero content horizontally */
+  padding-top: calc(var(--base) * 7);
+
 
   @include small-break {
     margin: 0;

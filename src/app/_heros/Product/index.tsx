@@ -41,13 +41,13 @@ export const ProductHero: React.FC<{
               )
             })}
           </div>
-          <p className={classes.stock}> In stock</p>
+          <p className={classes.stock}> En stock</p>
         </div>
 
         <Price product={product} button={false} />
 
         <div className={classes.description}>
-          <h6>Description</h6>
+          <h6>Descripción</h6>
           <p>{description}</p>
         </div>
 

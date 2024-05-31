@@ -9,7 +9,7 @@
 }
 
 .absolute {
-  display: flex; /* Mantén la propiedad flex para el layout en PC */
+  display: flex;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -19,12 +19,12 @@
 }
 
 .absolute.mobile {
-  display: none; /* Ocultar la imagen en dispositivos móviles */
+  display: none;
 }
 
-@media (max-width: 768px) { /* Ajusta el punto de corte según tus necesidades */
+@media (max-width: 768px) {
   .absolute {
-    display: none; /* Ocultar la imagen en dispositivos móviles */
+    display: none;
   }
 }
 
@@ -35,7 +35,6 @@
   padding: 15% var(--gutter-h);
   width: 100%;
   text-align: center;
-
 }
 
 .links {
@@ -72,4 +71,61 @@
     height: auto;
     border-radius: 20px;
   }
+}
+// styles.module.scss or your global CSS file
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.block {
+  display: block;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
+.bg-green-700 {
+  background-color: #2f855a;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.sm\:h-6 {
+  @media (min-width: 640px) {
+    height: 1.5rem;
+  }
+}
+
+.xl\:h-12 {
+  @media (min-width: 1280px) {
+    height: 3rem;
+  }
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

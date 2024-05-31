@@ -68,7 +68,7 @@ export const CheckoutPage: React.FC<{
             setClientSecret(res.client_secret)
           }
         } catch (e) {
-          setError('Something went wrong.')
+          setError('Algo salió mal.')
         }
       }
 
@@ -126,11 +126,13 @@ export const CheckoutPage: React.FC<{
                     <div className={classes.rowContent}>
                       {!stripeProductID && (
                         <p className={classes.warning}>
-                          {'This product is not yet connected to Stripe. To link this product, '}
+                          {
+                            'Este producto aún no está conectado a Stripe. Para vincular este producto, '
+                          }
                           <Link
                             href={`${process.env.NEXT_PUBLIC_SERVER_URL}/admin/collections/products/${id}`}
                           >
-                            edit this product in the admin panel
+                            para editar este producto en el panel de administración
                           </Link>
                           {'.'}
                         </p>
@@ -145,7 +147,7 @@ export const CheckoutPage: React.FC<{
             }
             return null
           })}
-          <div className={classes.orderTotal}>{`Order total: ${cartTotal.formatted}`}</div>
+          <div className={classes.orderTotal}>{`Orden total: ${cartTotal.formatted}`}</div>
         </div>
       )}
       {!clientSecret && !error && (
@@ -156,7 +158,7 @@ export const CheckoutPage: React.FC<{
       {!clientSecret && error && (
         <div className={classes.error}>
           <p>{`Error: ${error}`}</p>
-          <Button label="Back to cart" href="/cart" appearance="secondary" />
+          <Button label="Volver al carrito" href="/cart" appearance="secondary" />
         </div>
       )}
       {clientSecret && (
