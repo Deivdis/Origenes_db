@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 
 import classes from './index.module.scss'
-import { TextGenerateEffectDemo } from "../features/text-effect-demo";
+import { TextGenerateEffectDemo } from "../Features/text-effect-demo";
 
 const Promotion = () => {
   const [time, setTime] = useState({

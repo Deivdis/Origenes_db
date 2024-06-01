@@ -28,18 +28,19 @@
   }
 }
 
+.title {
+  padding-top: calc(var(--base) * 7);
+}
+
 .richText {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  padding: 15% var(--gutter-h);
   width: 100%;
   text-align: center;
 }
 
 .links {
   list-style: none;
-  padding: 15% var(--gutter-h);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -65,6 +66,7 @@
 }
 
 .media {
+  padding-top: calc(var(--base) * 9.5);
 
   img {
     width: 100%;
@@ -72,7 +74,7 @@
     border-radius: 20px;
   }
 }
-// styles.module.scss or your global CSS file
+
 .flex {
   display: flex;
 }
