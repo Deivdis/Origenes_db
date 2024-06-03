@@ -13,7 +13,7 @@ import classes from './index.module.scss'
 
 export default async function Login() {
   await getMeUser({
-    validUserRedirect: `/account?warning=${encodeURIComponent('You are already logged in.')}`,
+    validUserRedirect: `/account?warning=${encodeURIComponent('Ya se ha autentificado.')}`,
   })
 
   return (
@@ -35,11 +35,11 @@ export default async function Login() {
           <RenderParams className={classes.params} />
 
           <div className={classes.formTitle}>
-            <h3>Welcome</h3>
+            <h3>Bienvenido</h3>
             <Image src="/assets/icons/hand.png" alt="hand" width={30} height={30} />
           </div>
 
-          <p>Please login here</p>
+          <p>Por favor inicia sesión aquí</p>
 
           <LoginForm />
         </div>
@@ -49,10 +49,10 @@ export default async function Login() {
 }
 
 export const metadata: Metadata = {
-  title: 'Login',
-  description: 'Login or create an account to get started.',
+  title: 'Iniciar sesión',
+  description: 'Inicie sesión o cree una cuenta para comenzar.',
   openGraph: mergeOpenGraph({
-    title: 'Login',
+    title: 'iniciar sesión',
     url: '/login',
   }),
 }

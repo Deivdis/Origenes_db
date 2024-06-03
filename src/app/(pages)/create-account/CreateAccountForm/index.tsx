@@ -48,7 +48,7 @@ const CreateAccountForm: React.FC = () => {
       })
 
       if (!response.ok) {
-        const message = response.statusText || 'There was an error creating the account.'
+        const message = response.statusText || 'Hubo un error al crear la cuenta.'
         setError(message)
         return
       }
@@ -67,7 +67,7 @@ const CreateAccountForm: React.FC = () => {
         window.location.href = '/'
       } catch (_) {
         clearTimeout(timer)
-        setError('There was an error with the credentials provided. Please try again.')
+        setError('Hubo un error con las credenciales proporcionadas. Inténtalo de nuevo.')
       }
     },
     [login, router, searchParams],
@@ -76,8 +76,8 @@ const CreateAccountForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
       <p>
-        {`This is where new customers can signup and create a new account. To manage all users, `}
-        <Link href="/admin/collections/users">login to the admin dashboard</Link>
+        {`Aquí es donde los nuevos clientes pueden registrarse y crear una nueva cuenta. Para gestionar todos los usuarios, `}
+        <Link href="/admin/collections/users">inicie sesión en el panel de administración</Link>
         {'.'}
       </p>
       <Message error={error} className={classes.message} />
@@ -91,7 +91,7 @@ const CreateAccountForm: React.FC = () => {
       />
       <Input
         name="name"
-        label="Full name"
+        label="Nombre completo"
         required
         register={register}
         error={errors.name}
@@ -100,7 +100,7 @@ const CreateAccountForm: React.FC = () => {
       <Input
         name="password"
         type="password"
-        label="Password"
+        label="Contraseña"
         required
         register={register}
         error={errors.password}
@@ -108,22 +108,22 @@ const CreateAccountForm: React.FC = () => {
       <Input
         name="passwordConfirm"
         type="password"
-        label="Confirm Password"
+        label="Confirmar contraseña"
         required
         register={register}
-        validate={value => value === password.current || 'The passwords do not match'}
+        validate={value => value === password.current || 'las contraseñas no coinciden'}
         error={errors.passwordConfirm}
       />
       <Button
         type="submit"
-        label={loading ? 'Processing' : 'Sign up'}
+        label={loading ? 'Processing' : 'Create'}
         disabled={loading}
         appearance="primary"
         className={classes.submit}
       />
       <div>
-        {'Already have an account? '}
-        <Link href={`/login${allParams}`}>Login</Link>
+        {'¿Ya tienes una cuenta? '}
+        <Link href={`/login${allParams}`}>iniciar sesión</Link>
       </div>
     </form>
   )

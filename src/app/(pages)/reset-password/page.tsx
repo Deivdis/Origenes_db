@@ -18,10 +18,10 @@ export default async function ResetPassword() {
 }
 
 export const metadata: Metadata = {
-  title: 'Reset Password',
-  description: 'Enter a new password.',
+  title: 'Restablecer la contraseña',
+  description: 'Introduzca una nueva contraseña.',
   openGraph: mergeOpenGraph({
-    title: 'Reset Password',
+    title: 'Restablecer la contraseña',
     url: '/reset-password',
   }),
 }

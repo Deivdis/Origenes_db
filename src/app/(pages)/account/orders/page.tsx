@@ -15,7 +15,7 @@ import classes from './index.module.scss'
 export default async function Orders() {
   const { token } = await getMeUser({
     nullUserRedirect: `/login?error=${encodeURIComponent(
-      'You must be logged in to view your orders.',
+      'Debes iniciar sesión para ver tus pedidos.',
     )}&redirect=${encodeURIComponent('/orders')}`,
   })
 
@@ -43,9 +43,9 @@ export default async function Orders() {
 
   return (
     <div>
-      <h5>My Orders</h5>
+      <h5>Mis ordenes</h5>
       {(!orders || !Array.isArray(orders) || orders?.length === 0) && (
-        <p className={classes.noOrders}>You have no orders.</p>
+        <p className={classes.noOrders}>No tienes órdenes.</p>
       )}
       <RenderParams />
       {orders && orders.length > 0 && (
@@ -58,7 +58,7 @@ export default async function Orders() {
                   <div className={classes.itemMeta}>
                     <p>
                       {'Total: '}
-                      {new Intl.NumberFormat('en-US', {
+                      {new Intl.NumberFormat('es-COP', {
                         style: 'currency',
                         currency: 'usd',
                       }).format(order.total / 100)}
@@ -70,7 +70,7 @@ export default async function Orders() {
                 </div>
                 <Button
                   appearance="default"
-                  label="View Order"
+                  label="Ver pedido"
                   className={classes.button}
                   el="link"
                   href={`/account/orders/${order.id}`}
@@ -85,10 +85,10 @@ export default async function Orders() {
 }
 
 export const metadata: Metadata = {
-  title: 'Orders',
-  description: 'Your orders.',
+  title: 'Pedidos',
+  description: 'Tus ordenes.',
   openGraph: mergeOpenGraph({
-    title: 'Orders',
+    title: 'Pedidos',
     url: '/orders',
   }),
 }

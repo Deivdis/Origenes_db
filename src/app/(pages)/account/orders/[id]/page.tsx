@@ -16,7 +16,7 @@ import classes from './index.module.scss'
 export default async function Order({ params: { id } }) {
   const { token } = await getMeUser({
     nullUserRedirect: `/login?error=${encodeURIComponent(
-      'You must be logged in to view this order.',
+      'Debes iniciar sesión para ver este pedido.',
     )}&redirect=${encodeURIComponent(`/order/${id}`)}`,
   })
 
@@ -46,18 +46,18 @@ export default async function Order({ params: { id } }) {
   return (
     <div>
       <h5>
-        {`Order`}
+        {`Orden`}
         <span className={classes.id}>{` ${order.id}`}</span>
       </h5>
       <div className={classes.itemMeta}>
         <p>{`ID: ${order.id}`}</p>
-        <p>{`Payment Intent: ${order.stripePaymentIntentID}`}</p>
-        <p>{`Ordered On: ${formatDateTime(order.createdAt)}`}</p>
+        <p>{`Intención de pago: ${order.stripePaymentIntentID}`}</p>
+        <p>{`Ordenado el: ${formatDateTime(order.createdAt)}`}</p>
         <p className={classes.total}>
           {'Total: '}
-          {new Intl.NumberFormat('en-US', {
+          {new Intl.NumberFormat('es-COP', {
             style: 'currency',
-            currency: 'usd',
+            currency: 'cop',
           }).format(order.total / 100)}
         </p>
       </div>
@@ -90,11 +90,13 @@ export default async function Order({ params: { id } }) {
                   <div className={classes.rowContent}>
                     {!stripeProductID && (
                       <p className={classes.warning}>
-                        {'This product is not yet connected to Stripe. To link this product, '}
+                        {
+                          'Este producto aún no está conectado a Stripe. Para vincular este producto, '
+                        }
                         <Link
                           href={`${process.env.NEXT_PUBLIC_SERVER_URL}/admin/collections/products/${id}`}
                         >
-                          edit this product in the admin panel
+                          editar este producto en el panel de administración
                         </Link>
                         {'.'}
                       </p>
@@ -122,10 +124,10 @@ export default async function Order({ params: { id } }) {
 
 export async function generateMetadata({ params: { id } }): Promise<Metadata> {
   return {
-    title: `Order ${id}`,
-    description: `Order details for order ${id}.`,
+    title: `Orden ${id}`,
+    description: `Detalles del pedido para el pedido ${id}.`,
     openGraph: mergeOpenGraph({
-      title: `Order ${id}`,
+      title: `Orden ${id}`,
       url: `/orders/${id}`,
     }),
   }

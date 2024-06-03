@@ -1,8 +1,9 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 
+import { TextGenerateEffectDemo } from '../Features/text-effect-demo'
+
 import classes from './index.module.scss'
-import { TextGenerateEffectDemo } from "../Features/text-effect-demo";
 
 const Promotion = () => {
   const [time, setTime] = useState({
@@ -29,12 +30,12 @@ const Promotion = () => {
 
       if (timeDifference === 0) {
         clearInterval(timerInterval)
-        // You can add code here to handle what happens when the target date is reached.
+        // Puede agregar código aquí para manejar lo que sucede cuando se alcanza la fecha objetivo.
       }
     }, 1000)
 
     return () => {
-      clearInterval(timerInterval) // Cleanup the interval when the component unmounts.
+      clearInterval(timerInterval) // Limpia el intervalo cuando el componente se desmonta.
     }
   }, [])
 
@@ -42,7 +43,7 @@ const Promotion = () => {
     <section className={classes.promotion}>
       <div className={classes.textBox}>
         <h3 className={classes.title}>Ofertas del mes</h3>
-        <TextGenerateEffectDemo></TextGenerateEffectDemo>
+        <TextGenerateEffectDemo />
         <ul className={classes.stats}>
           <StatBox label="Dias" value={time.dias} />
           <StatBox label="Horas" value={time.horas} />

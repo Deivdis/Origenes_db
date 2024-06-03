@@ -1,7 +1,7 @@
 @use '../../_css/common.scss' as *;
 
 .hero {
-  padding-top: calc(var(--base) * 7);
+  padding-top: calc(var(--base) * 10);
 
   @include mid-break {
     padding-top: var(--base);
@@ -66,7 +66,7 @@
 }
 
 .media {
-  padding-top: calc(var(--base) * 9.5);
+  padding-top: calc(var(--base) * 10);
 
   img {
     width: 100%;

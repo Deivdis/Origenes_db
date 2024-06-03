@@ -17,7 +17,7 @@ export default async function Purchases() {
 
   return (
     <div>
-      <h5>Purchased Products</h5>
+      <h5>Productos comprados</h5>
       <div>
         {user?.purchases?.length || 0 > 0 ? (
           <ul className={classes.purchases}>
@@ -50,7 +50,7 @@ export default async function Purchases() {
             })}
           </ul>
         ) : (
-          <div className={classes.noPurchases}>You have no purchases.</div>
+          <div className={classes.noPurchases}>No tienes compras.</div>
         )}
       </div>
     </div>

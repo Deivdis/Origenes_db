@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 import { Category } from '../../../payload/payload-types'
+import { PinContainer } from '../ui/3d-pin'
 import CategoryCard from './CategoryCard'
 
 import classes from './index.module.scss'
@@ -15,7 +16,6 @@ const Categories = ({ categories }: { categories: Category[] }) => {
           Ver todo
         </Link>
       </div>
-
       <div className={classes.list}>
         {categories.map(category => {
           return <CategoryCard key={category.id} category={category} />

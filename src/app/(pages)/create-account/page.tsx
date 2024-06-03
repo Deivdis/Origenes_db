@@ -14,7 +14,7 @@ import classes from './index.module.scss'
 export default async function CreateAccount() {
   await getMeUser({
     validUserRedirect: `/account?warning=${encodeURIComponent(
-      'Cannot create a new account while logged in, please log out and try again.',
+      'No se puede crear una nueva cuenta mientras estás conectado, cierra la sesión e inténtalo de nuevo.',
     )}`,
   })
 
@@ -37,11 +37,11 @@ export default async function CreateAccount() {
           <RenderParams className={classes.params} />
 
           <div className={classes.formTitle}>
-            <h3>Create Account</h3>
+            <h3>Crear una cuenta</h3>
             <Image src="/assets/icons/hand.png" alt="hand" width={30} height={30} />
           </div>
 
-          <p>Please enter details</p>
+          <p>Por favor ingresa los detalles</p>
 
           <CreateAccountForm />
         </div>
@@ -51,10 +51,10 @@ export default async function CreateAccount() {
 }
 
 export const metadata: Metadata = {
-  title: 'Account',
-  description: 'Create an account or log in to your existing account.',
+  title: 'Cuenta',
+  description: 'Cree una cuenta o inicie sesión en su cuenta existente.',
   openGraph: mergeOpenGraph({
-    title: 'Account',
+    title: 'Cuenta',
     url: '/account',
   }),
 }

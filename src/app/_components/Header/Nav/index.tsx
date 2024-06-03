@@ -7,6 +7,7 @@ import { Header as HeaderType, User } from '../../../../payload/payload-types'
 import { useAuth } from '../../../_providers/Auth'
 import { CartLink } from '../../CartLink'
 import { CMSLink } from '../../Link'
+import { HoverBorderGradient } from '../../ui/hover-border-gradient'
 
 import classes from './index.module.scss'
 
@@ -18,8 +19,8 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
     <nav
       className={[
         classes.nav,
-        // fade the nav in on user load to avoid flash of content and layout shift
-        // Vercel also does this in their own website header, see https://vercel.com
+        // atenuar la navegación durante la carga del usuario para evitar destellos de contenido y cambios de diseño
+        // Vercel también hace esto en el encabezado de su propio sitio web, consulte https://vercel.com
         user === undefined && classes.hide,
       ]
         .filter(Boolean)
@@ -29,12 +30,16 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
         return <CMSLink key={i} {...link} appearance="none" />
       })}
       <CartLink />
-      {user && <Link href="/account">Cuenta</Link>}
-      {!user && (
-        <React.Fragment>
-          <Link href="/login">Iniciar Secion</Link>
-        </React.Fragment>
-      )}
+      <HoverBorderGradient>
+        {user && <Link href="/account">Cuenta</Link>}
+        {!user && (
+          <React.Fragment>
+            <span>
+              <Link href="/login">Iniciar Secion</Link>
+            </span>
+          </React.Fragment>
+        )}
+      </HoverBorderGradient>
     </nav>
   )
 }
