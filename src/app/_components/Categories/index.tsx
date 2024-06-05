@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 import { Category } from '../../../payload/payload-types'
-import { PinContainer } from '../ui/3d-pin'
+import BlurIn from '../ui/blur-in'
 import CategoryCard from './CategoryCard'
 
 import classes from './index.module.scss'
@@ -11,7 +11,7 @@ const Categories = ({ categories }: { categories: Category[] }) => {
   return (
     <section className={classes.container}>
       <div className={classes.titleWrapper}>
-        <h3>Comprar por categorías</h3>
+        <BlurIn word="Comprar por categorías"></BlurIn>
         <Link href="/products" className="text-green-700">
           Ver todo
         </Link>

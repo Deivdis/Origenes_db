@@ -7,6 +7,7 @@ import { Gutter } from '../../_components/Gutter'
 import { CMSLink } from '../../_components/Link'
 import { Media } from '../../_components/Media'
 import RichText from '../../_components/RichText'
+import { Spotlight } from '../../_components/ui/Spotlight'
 import { TypewriterEffectSmooth } from '../../_components/ui/typewriter-effect'
 
 import '../../_css/global.scss'
@@ -27,19 +28,18 @@ export const MediumImpactHero: React.FC<Page['hero']> = props => {
           </div>
           {Array.isArray(links) && (
             <ul className={classes.links}>
-              {links.map(({ link }, i) => {
-                return (
-                  <li key={i}>
-                    <CMSLink className={classes.link} {...link} />
-                  </li>
-                )
-              })}
+              {links.map(({ link }, i) => (
+                <li key={i}>
+                  <CMSLink className={classes.link} {...link} />
+                </li>
+              ))}
             </ul>
           )}
         </div>
       </div>
-      <div className="">
-        <div className={classes.media}>
+      <div className="relative z-0">
+        <Spotlight />
+        <div className={`${classes.media} relative z-10`}>
           {typeof media === 'object' && <Media className={classes.media} resource={media} />}
         </div>
       </div>
