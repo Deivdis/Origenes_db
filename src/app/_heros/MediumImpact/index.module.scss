@@ -148,3 +148,16 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+@keyframes meteor {
+  0% {
+    transform: translateX(0) translateY(0) rotate(215deg);
+  }
+  100% {
+    transform: translateX(100vw) translateY(100vh) rotate(215deg);
+  }
+}
+
+.animate-meteor {
+  animation: meteor linear infinite;
+}

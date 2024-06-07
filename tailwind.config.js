@@ -12,7 +12,8 @@ module.exports = {
     extend: {
       animation: {
         spotlight: 'spotlight 2s ease .75s 1 forwards',
-        'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
+        meteor: 'meteor 5s linear infinite',
+        ripple: 'ripple 3400ms ease infinite',
       },
       keyframes: {
         spotlight: {
@@ -25,9 +26,20 @@ module.exports = {
             transform: 'translate(-50%,-40%) scale(1)',
           },
         },
-        'border-beam': {
+        meteor: {
+          '0%': { transform: 'rotate(215deg) translateX(0)', opacity: 1 },
+          '70%': { opacity: 1 },
           '100%': {
-            'offset-distance': '100%',
+            transform: 'rotate(215deg) translateX(-500px)',
+            opacity: 0,
+          },
+        },
+        ripple: {
+          '0%, 100%': {
+            transform: 'translate(-50%, -50%) scale(1)',
+          },
+          '50%': {
+            transform: 'translate(-50%, -50%) scale(0.9)',
           },
         },
       },

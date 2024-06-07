@@ -9,6 +9,7 @@ import { RadioButton } from '../../../_components/Radio'
 import { useFilter } from '../../../_providers/Filter'
 
 import classes from './index.module.scss'
+import Particles from "../../../_components/ui/particles";
 
 const Filters = ({ categories }: { categories: Category[] }) => {
   const { categoryFilters, sort, setCategoryFilters, setSort } = useFilter()

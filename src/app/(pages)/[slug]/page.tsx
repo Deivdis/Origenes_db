@@ -21,6 +21,7 @@ import { generateMeta } from '../../_utilities/generateMeta'
 export const dynamic = 'force-dynamic'
 
 import Categories from '../../_components/Categories'
+import Description from '../../_components/Description'
 import Promotion from '../../_components/Promotion'
 
 import classes from './index.module.scss'
@@ -56,8 +57,8 @@ export default async function Page({ params: { slug = 'home' } }) {
       {slug === 'home' ? (
         <section>
           <Hero {...hero} />
-
           <Gutter className={classes.home}>
+            <Description />
             <Categories categories={categories} />
             <Promotion />
           </Gutter>

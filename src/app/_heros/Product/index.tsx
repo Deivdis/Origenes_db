@@ -5,6 +5,7 @@ import { AddToCartButton } from '../../_components/AddToCartButton'
 import { Gutter } from '../../_components/Gutter'
 import { Media } from '../../_components/Media'
 import { Price } from '../../_components/Price'
+import Particles from '../../_components/ui/particles'
 
 import classes from './index.module.scss'
 
@@ -23,6 +24,7 @@ export const ProductHero: React.FC<{
       </div>
 
       <div className={classes.details}>
+        <Particles className="absolute inset-0 z-0" />
         <h3 className={classes.title}>{title}</h3>
 
         <div className={classes.categoryWrapper}>

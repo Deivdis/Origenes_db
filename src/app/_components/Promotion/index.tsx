@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { TextGenerateEffectDemo } from '../Features/text-effect-demo'
 
 import classes from './index.module.scss'
+import BlurIn from "../ui/blur-in";
 
 const Promotion = () => {
   const [time, setTime] = useState({
@@ -42,7 +43,7 @@ const Promotion = () => {
   return (
     <section className={classes.promotion}>
       <div className={classes.textBox}>
-        <h3 className={classes.title}>Ofertas del mes</h3>
+        <BlurIn word="Oferta del mes"></BlurIn>
         <TextGenerateEffectDemo />
         <ul className={classes.stats}>
           <StatBox label="Dias" value={time.dias} />
