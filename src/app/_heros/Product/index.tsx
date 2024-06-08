@@ -24,7 +24,6 @@ export const ProductHero: React.FC<{
       </div>
 
       <div className={classes.details}>
-        <Particles className="absolute inset-0 z-0" />
         <h3 className={classes.title}>{title}</h3>
 
         <div className={classes.categoryWrapper}>
@@ -53,8 +52,15 @@ export const ProductHero: React.FC<{
           <p>{description}</p>
         </div>
 
-        <AddToCartButton product={product} className={classes.addToCartButton} />
+        <div className="z-10">
+          <AddToCartButton
+            product={product}
+            className="w-full flex justify-center items-center text-white py-2 px-4 rounded-md shadow-md"
+          />
+        </div>
       </div>
+
+      <Particles className="absolute inset-0 z-0" />
     </Gutter>
   )
 }
