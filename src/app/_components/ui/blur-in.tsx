@@ -36,3 +36,5 @@ const BlurIn = ({ word, className, variant, duration = 1 }: BlurIntProps) => {
 }
 
 export default BlurIn
+
+//hola
