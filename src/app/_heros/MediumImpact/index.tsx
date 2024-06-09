@@ -6,7 +6,7 @@ import { Gutter } from '../../_components/Gutter'
 import { CMSLink } from '../../_components/Link'
 import { Media } from '../../_components/Media'
 import Particles from '../../_components/ui/particles'
-import { Spotlight } from '../../_components/ui/Spotlight/Spotlight'
+import { Spotlight } from '../../_components/ui/Spotlight'
 import { TypewriterEffectSmooth } from '../../_components/ui/typewriter-effect'
 
 import '../../_css/global.scss'

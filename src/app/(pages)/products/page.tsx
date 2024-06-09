@@ -7,6 +7,7 @@ import { fetchDocs } from '../../_api/fetchDocs'
 import { Blocks } from '../../_components/Blocks'
 import { Gutter } from '../../_components/Gutter'
 import { HR } from '../../_components/HR'
+import Particles from '../../_components/ui/particles'
 import Filters from './Filters'
 
 import classes from './index.module.scss'
@@ -31,6 +32,7 @@ const Products = async () => {
 
   return (
     <div className="relative w-full h-full">
+      <Particles className="absolute inset-0 z-0" />
       <div className={classes.container}>
         <Gutter className={classes.products}>
           <Filters categories={categories} />
