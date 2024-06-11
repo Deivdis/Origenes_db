@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { cn } from '../../_utilities/cn'
+import { cn } from '../../../_utilities/cn'
 
-import './Spotlight.css'
+import './index.module.scss'
 
 type SpotlightProps = {
   className?: string

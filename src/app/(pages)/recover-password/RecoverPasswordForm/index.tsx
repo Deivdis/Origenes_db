@@ -61,6 +61,7 @@ export const RecoverPasswordForm: React.FC = () => {
               name="email"
               label="Correo electrónico"
               required
+              placeholder="Escriba su correo"
               register={register}
               error={errors.email}
               type="email"

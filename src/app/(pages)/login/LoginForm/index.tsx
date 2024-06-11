@@ -52,6 +52,7 @@ const LoginForm: React.FC = () => {
         name="email"
         label="Correo electrónico"
         required
+        placeholder="Escriba su correo"
         register={register}
         error={errors.email}
         type="email"
@@ -61,6 +62,7 @@ const LoginForm: React.FC = () => {
         type="password"
         label="Contraseña"
         required
+        placeholder="Escriba su contraseña"
         register={register}
         error={errors.password}
       />

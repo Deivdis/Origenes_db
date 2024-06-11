@@ -74,6 +74,7 @@ export const ResetPasswordForm: React.FC = () => {
         type="password"
         label="Nueva contraseña"
         required
+        placeholder="Escriba su nueva contraseña"
         register={register}
         error={errors.password}
       />

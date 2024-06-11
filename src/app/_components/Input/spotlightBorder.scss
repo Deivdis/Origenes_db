@@ -1,0 +1,67 @@
+.relative {
+  position: relative;
+}
+
+.input-wrapper {
+  width: 100%;
+}
+
+.base-input {
+  height: 3rem;
+  width: 100%;
+  cursor: default;
+  border-radius: 0.5rem;
+  border: 1px solid #2d3748;
+  background-color: #1a202c;
+  padding: 0.875rem;
+  color: #cbd5e0;
+  transition: border-color 0.5s;
+  outline: none;
+
+  &:focus {
+    border-color: #4D8330;
+  }
+
+  &::placeholder {
+    color: #718096;
+    user-select: none;
+  }
+}
+
+.overlay-input {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  height: 3rem;
+  width: 100%;
+  cursor: default;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  padding: 0.875rem;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.error {
+  background-color: var(--theme-error-150);
+}
+
+.label {
+  margin-bottom: 0;
+  display: block;
+  line-height: 1;
+  margin-bottom: calc(var(--base) / 2);
+}
+
+.errorMessage {
+  font-size: small;
+  line-height: 1.25;
+  margin-top: 4px;
+  color: red;
+}
+
+.asterisk {
+  color: var(--color-error-500);
+}

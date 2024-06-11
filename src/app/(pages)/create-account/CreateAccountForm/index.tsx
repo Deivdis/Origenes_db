@@ -76,15 +76,15 @@ const CreateAccountForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
       <p>
-        {`Aquí es donde los nuevos clientes pueden registrarse y crear una nueva cuenta. Para gestionar todos los usuarios, `}
-        <Link href="/admin/collections/users">inicie sesión en el panel de administración</Link>
+        {`Aquí es donde los nuevos clientes pueden registrarse y crear una nueva cuenta. Para gestionar todos los usuarios`}
         {'.'}
       </p>
       <Message error={error} className={classes.message} />
       <Input
         name="email"
-        label="Email Address"
+        label="Correo electrónico"
         required
+        placeholder="Escriba su correo"
         register={register}
         error={errors.email}
         type="email"
@@ -93,6 +93,7 @@ const CreateAccountForm: React.FC = () => {
         name="name"
         label="Nombre completo"
         required
+        placeholder="Escriba su Nombre"
         register={register}
         error={errors.name}
         type="text"
@@ -102,6 +103,7 @@ const CreateAccountForm: React.FC = () => {
         type="password"
         label="Contraseña"
         required
+        placeholder="Escriba su contraseña"
         register={register}
         error={errors.password}
       />
@@ -110,6 +112,7 @@ const CreateAccountForm: React.FC = () => {
         type="password"
         label="Confirmar contraseña"
         required
+        placeholder="Confirmar contraseña"
         register={register}
         validate={value => value === password.current || 'las contraseñas no coinciden'}
         error={errors.passwordConfirm}
