@@ -20,17 +20,8 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({ text, className })
 
   return (
     <div ref={targetRef} className={cn('relative z-0 h-[200vh]', className)}>
-      <div
-        className={
-          'sticky top-0 mx-auto flex h-[50%] max-w-1xl items-center bg-transparent px-[1rem] py-[5rem]'
-        }
-      >
-        <p
-          ref={targetRef}
-          className={
-            'flex flex-wrap p-5 text-2xl font-bold md:p-8 md:text-2xl lg:p-10 lg:text-4xl xl:text-5xl'
-          }
-        >
+      <div className="sticky top-0 mx-auto flex h-[50%] max-w-1xl items-center bg-transparent px-4 py-10 md:px-8 md:py-20">
+        <p ref={targetRef} className="flex flex-wrap p-5 text-xl font-bold md:p-8 md:text-2xl lg:p-10 lg:text-4xl xl:text-5xl">
           {words.map((word, i) => {
             const start = i / words.length
             const end = start + 1 / words.length
@@ -55,8 +46,8 @@ interface WordProps {
 const Word: FC<WordProps> = ({ children, progress, range }) => {
   const opacity = useTransform(progress, range, [0, 1])
   return (
-    <span className="xl:lg-3 relative mx-1 lg:mx-2.5">
-      <span className={'absolute opacity-30'}>{children}</span>
+    <span className="relative mx-1 lg:mx-2.5">
+      <span className="absolute opacity-30">{children}</span>
       <motion.span style={{ opacity: opacity }}>{children}</motion.span>
     </span>
   )

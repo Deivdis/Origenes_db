@@ -35,7 +35,7 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
         {!user && (
           <React.Fragment>
             <span>
-              <Link href="/login">Iniciar Secion</Link>
+              <Link href="/login">Iniciar Sesión</Link>
             </span>
           </React.Fragment>
         )}

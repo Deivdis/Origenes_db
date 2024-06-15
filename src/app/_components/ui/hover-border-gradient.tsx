@@ -1,4 +1,3 @@
-'use client'
 import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 
@@ -25,6 +24,7 @@ export function HoverBorderGradient({
 >) {
   const [hovered, setHovered] = useState<boolean>(false)
   const [direction, setDirection] = useState<Direction>('TOP')
+  const containerRef = useRef<HTMLDivElement>(null)
 
   const rotateDirection = (currentDirection: Direction): Direction => {
     const directions: Direction[] = ['TOP', 'LEFT', 'BOTTOM', 'RIGHT']
@@ -55,8 +55,28 @@ export function HoverBorderGradient({
       return () => clearInterval(interval)
     }
   }, [hovered])
+
+  const getOffset = () => {
+    if (!containerRef.current) return 0
+
+    const containerWidth = containerRef.current.offsetWidth
+    const containerHeight = containerRef.current.offsetHeight
+
+    const size = Math.min(containerWidth, containerHeight) * 0.8
+
+    const offset = size / 2
+
+    return offset
+  }
+
+  useEffect(() => {
+    const offset = getOffset()
+    setDirection('TOP')
+  }, [getOffset])
+
   return (
     <Tag
+      ref={containerRef}
       onMouseEnter={(event: React.MouseEvent<HTMLDivElement>) => {
         setHovered(true)
       }}

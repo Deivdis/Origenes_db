@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 
 import { cn } from '../../../_utilities/cn'
 
@@ -10,22 +11,48 @@ type SpotlightProps = {
 }
 
 export const Spotlight = ({ className, fill }: SpotlightProps) => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768) // Adjust breakpoint as needed
+    }
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const responsiveStyles = {
+    ...(isMobile
+      ? {
+          width: '90%', // Adjust width as needed for mobile
+          height: '90%', // Adjust height as needed for mobile
+          left: '45%', // Center horizontally for mobile
+          top: '65%', // Slightly above center vertically for mobile
+          transform: 'translate(-50%, -50%)', // Center transformation for mobile
+        }
+      : {
+          width: '90%', // Desktop width
+          height: '90%', // Desktop height
+          left: '45%', // Center horizontally for desktop
+          top: '35%', // Slightly above center vertically for desktop
+          transform: 'translate(-50%, -50%)', // Center transformation for desktop
+        }),
+  }
+
   return (
     <svg
-      className={cn(
-        'animate-spotlight pointer-events-none absolute h-[169%] w-[138%] lg:w-[84%] opacity-0',
-        className,
-      )}
+      className={cn('animate-spotlight pointer-events-none absolute', className)}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 3887 2842"
       fill="none"
       style={{
         overflow: 'visible',
-        left: '46%',
-        top: '25%',
-        transform: 'translate(-50%, -50%)',
-        position: 'absolute',
+        opacity: 0,
         zIndex: '-1',
+        ...responsiveStyles,
       }}
     >
       <g filter="url(#filter)">
