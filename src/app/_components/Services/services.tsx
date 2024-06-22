@@ -22,7 +22,7 @@ const Services: React.FC = () => {
         <div className="flex flex-col items-center">
           <img
             className="w-64 h-64 mb-4 rounded-lg object-cover"
-            src="/assets/images/image-11.webp"
+            src="/assets/images/unsplash-11.webp"
             alt="Envío rápido y eficiente"
           />
           <h3 className="text-xl font-bold mb-2">Envío rápido y eficiente</h3>
@@ -34,7 +34,7 @@ const Services: React.FC = () => {
         <div className="flex flex-col items-center">
           <img
             className="w-64 h-64 mb-4 rounded-lg object-cover"
-            src="/assets/images/image-11.webp"
+            src="/assets/images/unsplash-12.webp"
             alt="Soporte al cliente excepcional"
           />
           <h3 className="text-xl font-bold mb-2">Soporte al cliente excepcional</h3>

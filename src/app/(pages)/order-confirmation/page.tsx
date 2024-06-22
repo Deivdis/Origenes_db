@@ -18,10 +18,10 @@ export default async function OrderConfirmation() {
 }
 
 export const metadata: Metadata = {
-  title: 'Order Confirmation',
-  description: 'Your order has been confirmed.',
+  title: 'Confirmación del pedido',
+  description: 'Su pedido ha sido confirmado.',
   openGraph: mergeOpenGraph({
-    title: 'Order Confirmation',
+    title: 'Confirmación del pedido',
     url: '/order-confirmation',
   }),
 }

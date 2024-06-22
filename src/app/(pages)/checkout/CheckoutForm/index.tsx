@@ -102,7 +102,7 @@ export const CheckoutForm: React.FC<{}> = () => {
       <div className={classes.actions}>
         <Button label="Volver al carrito" href="/cart" appearance="secondary" />
         <Button
-          label={isLoading ? 'Cargando...' : 'Verificar'}
+          label={isLoading ? 'Loading...' : 'Verificar'}
           type="submit"
           appearance="primary"
           disabled={!stripe || isLoading}

@@ -6,9 +6,9 @@ const Features: React.FC = () => {
   const [hoveredFeature, setHoveredFeature] = useState<string | null>(null)
 
   const images = {
-    organic: '/assets/images/image-2.webp',
-    sustainable: '/assets/images/image-3.webp',
-    wellness: '/assets/images/image-4.webp',
+    organic: '/assets/images/unsplash-8.webp',
+    sustainable: '/assets/images/unsplash-9.webp',
+    wellness: '/assets/images/unsplash-10.webp',
   }
 
   return (

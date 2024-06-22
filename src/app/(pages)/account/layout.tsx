@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <nav className={classes.page}>
       <div className={classes.container}>
         <Gutter>
-          <h3>My Profile</h3>
+          <h3>Mi perfil</h3>
           <div className={classes.account}>
             <div className={classes.nav}>
               <UserInfo />

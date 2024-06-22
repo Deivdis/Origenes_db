@@ -16,7 +16,7 @@ const SectionAboutUs: React.FC = () => {
       <div className="w-full md:w-1/2 mt-4 md:mt-0">
         <img
           className="w-full h-auto rounded-2xl"
-          src="/assets/images/image-11.webp"
+          src="/assets/images/unsplash-4.webp"
           alt="Imagen de Origenes"
         />
       </div>

@@ -17,7 +17,7 @@ import classes from './index.module.scss'
 export default async function Orders() {
   const { token } = await getMeUser({
     nullUserRedirect: `/login?error=${encodeURIComponent(
-      'You must be logged in to view your orders.',
+      'Debes iniciar sesión para ver tus pedidos.',
     )}&redirect=${encodeURIComponent('/orders')}`,
   })
 
@@ -50,7 +50,7 @@ export default async function Orders() {
     <Gutter className={classes.orders}>
       <h1>Orders</h1>
       {(!orders || !Array.isArray(orders) || orders?.length === 0) && (
-        <p className={classes.noOrders}>You have no orders.</p>
+        <p className={classes.noOrders}>No tienes órdenes.</p>
       )}
       <RenderParams />
       {orders && orders.length > 0 && (
@@ -90,10 +90,10 @@ export default async function Orders() {
 }
 
 export const metadata: Metadata = {
-  title: 'Orders',
-  description: 'Your orders.',
+  title: 'Pedidos',
+  description: 'Tus ordenes.',
   openGraph: mergeOpenGraph({
-    title: 'Orders',
+    title: 'Pedidos',
     url: '/orders',
   }),
 }

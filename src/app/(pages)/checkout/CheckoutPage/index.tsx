@@ -82,13 +82,13 @@ export const CheckoutPage: React.FC<{
     <Fragment>
       {cartIsEmpty && (
         <div>
-          {'Your '}
-          <Link href="/cart">cart</Link>
-          {' is empty.'}
+          {'Su '}
+          <Link href="/cart">carrito</Link>
+          {' Está vacío.'}
           {typeof productsPage === 'object' && productsPage?.slug && (
             <Fragment>
               {' '}
-              <Link href={`/${productsPage.slug}`}>Continue shopping?</Link>
+              <Link href={`/${productsPage.slug}`}>¿Seguir comprando?</Link>
             </Fragment>
           )}
         </div>

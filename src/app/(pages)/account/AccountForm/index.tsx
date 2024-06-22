@@ -74,7 +74,7 @@ const AccountForm: React.FC = () => {
     if (user === null) {
       router.push(
         `/login?error=${encodeURIComponent(
-          'You must be logged in to view this page.',
+          'Usted debe estar conectado para ver esta página.',
         )}&redirect=${encodeURIComponent('/account')}`,
       )
     }

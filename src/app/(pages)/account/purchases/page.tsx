@@ -11,7 +11,7 @@ import classes from './index.module.scss'
 export default async function Purchases() {
   const { user } = await getMeUser({
     nullUserRedirect: `/login?error=${encodeURIComponent(
-      'You must be logged in to access your account.',
+      'Debes iniciar sesión para acceder a tu cuenta.',
     )}&redirect=${encodeURIComponent('/account')}`,
   })
 
@@ -25,7 +25,7 @@ export default async function Purchases() {
               return (
                 <li key={index} className={classes.purchase}>
                   {typeof purchase === 'string' ? (
-                    <p>{purchase} Test</p>
+                    <p>{purchase} Prueba</p>
                   ) : (
                     <Link href={`/products/${purchase.slug}`} className={classes.item}>
                       <div className={classes.mediaWrapper}>
@@ -39,7 +39,7 @@ export default async function Purchases() {
                       <div className={classes.itemDetails}>
                         <h6>{purchase.title}</h6>
                         <Price product={purchase} />
-                        <p className={classes.purchasedDate}>{`Purchased On: ${formatDateTime(
+                        <p className={classes.purchasedDate}>{`Comprado el: ${formatDateTime(
                           purchase.createdAt,
                         )}`}</p>
                       </div>

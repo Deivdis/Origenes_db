@@ -43,7 +43,7 @@ const BeneFits: React.FC = () => {
       <div className="w-full md:w-1/2 mb-6 md:mb-0 flex justify-center items-center">
         <img
           className="w-full h-auto rounded-lg object-cover"
-          src="/assets/images/image-2.webp"
+          src="/assets/images/unsplash-15.webp"
           alt="Beneficios de productos naturales"
         />
       </div>
