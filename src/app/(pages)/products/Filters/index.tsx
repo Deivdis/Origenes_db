@@ -28,40 +28,10 @@ const Filters = ({ categories }: { categories: Category[] }) => {
   return (
     <div className={classes.filters}>
       <div>
-        <h6 className={classes.title}>Categorías de productos</h6>
-        <div className={classes.categories}>
-          {categories.map(category => {
-            const isSelected = categoryFilters.includes(category.id)
-
-            return (
-              <Checkbox
-                key={category.id}
-                label={category.title}
-                value={category.id}
-                isSelected={isSelected}
-                onClickHandler={handleCategories}
-              />
-            )
-          })}
-        </div>
+        <h4 className={classes.title}>Todos los productos</h4>
+        <div className={classes.categories}></div>
         <HR className={classes.hr} />
-        <h6 className={classes.title}>Ordenar por</h6>
-        <div className={classes.categories}>
-          <RadioButton
-            label="Más resiente"
-            value="-createdAt"
-            isSelected={sort === '-createdAt'}
-            onRadioChange={handleSort}
-            groupName="sort"
-          />
-          <RadioButton
-            label="Más antiguo"
-            value="createdAt"
-            isSelected={sort === 'createdAt'}
-            onRadioChange={handleSort}
-            groupName="sort"
-          />
-        </div>
+        <div className={classes.categories}></div>
       </div>
     </div>
   )
