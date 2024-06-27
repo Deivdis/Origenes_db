@@ -19,7 +19,7 @@ export const LogoutPage: React.FC<{
     const performLogout = async () => {
       try {
         await logout()
-        setSuccess('Sesión creada exitosamente.')
+        setSuccess('Sesión cerrada exitosamente.')
       } catch (_) {
         setError('Ya has cerrado sesión.')
       }

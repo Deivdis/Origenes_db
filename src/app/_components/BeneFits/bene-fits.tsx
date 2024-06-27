@@ -2,7 +2,7 @@ import React from 'react'
 
 const BeneFits: React.FC = () => {
   return (
-    <section className="p-6 mb-30 flex flex-col md:flex-row items-center justify-between">
+    <section className="mb-30 flex flex-col md:flex-row items-center justify-between">
       <div className="flex flex-col max-w-lg space-y-6">
         <div className="text-center md:text-left">
           <h2 className="text-3xl font-bold mb-4">Beneficios de usar productos naturales</h2>

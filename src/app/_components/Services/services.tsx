@@ -3,7 +3,7 @@ import React from 'react'
 
 const Services: React.FC = () => {
   return (
-    <section className="p-6 mb-40">
+    <section className="mb-40">
       <div className="text-center mb-32">
         <h2 className="text-5xl font-bold mb-4">
           Descubre nuestros servicios de

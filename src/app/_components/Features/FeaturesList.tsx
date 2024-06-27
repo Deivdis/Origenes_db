@@ -12,7 +12,7 @@ const Features: React.FC = () => {
   }
 
   return (
-    <section className="flex flex-col md:flex-row items-start justify-between p-6 mb-40">
+    <section className="flex flex-col md:flex-row items-start justify-between mb-40">
       <div className="w-full md:w-1/2 mt-4 md:mt-0 flex justify-center items-center">
         <motion.div className="w-full h-auto rounded-2xl overflow-hidden">
           <motion.img

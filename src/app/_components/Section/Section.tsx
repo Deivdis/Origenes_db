@@ -19,7 +19,7 @@ export default function Section() {
       className="relative flex items-center justify-center h-screen overflow-hidden"
       style={{ clipPath: 'polygon(0% 0, 100% 0%, 100% 100%, 0 100%)' }}
     >
-      <div className="relative z-10 p-6 md:p-20 mix-blend-difference text-white w-full h-full flex flex-col justify-between">
+      <div className="relative z-10 md:p-20 mix-blend-difference text-white w-full h-full flex flex-col justify-between">
         <p className="w-full md:w-[50vw] text-[4vw] md:text-[2vw] self-end uppercase mix-blend-difference">
           Te brindamos una amplia gama de suplementos nutricionales cuidadosamente seleccionados
           para mejorar tu bienestar.
